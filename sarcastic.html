@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun Text Generator</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+        background-color: darkorchid;
+      }
+
+      .typer {
+        margin: 0 auto;
+        background: white;
+        width: 500px;
+        padding: 4rem;
+        padding: 4rem;
+        border-radius: 3px;
+        display: grid;
+      }
+
+      .typer {
+        border-radius: 10px;
+        box-shadow: 35px 20px 15px rgb(61, 31, 131);
+        border: 3px solid rgb(89, 6, 110);
+      }
+
+      textarea {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="typer"
+      style="
+        color:
+        font-weight: 100;
+        font-family: monospace;
+        line-height: 35px;
+        font-size: 20px;
+      "
+      ;
+    >
+      <label for="sarcastic">
+        <input
+          type="radio"
+          value="sarcastic"
+          id="sarcastic"
+          name="filter"
+          checked
+        />
+        Sarcastic
+      </label>
+      <label for="funky">
+        <input type="radio" value="funky" id="funky" name="filter" />
+        Funky
+      </label>
+      <label for="unable">
+        <input type="radio" value="unable" id="unable" name="filter" />
+        Unable to Structure a Sentence
+      </label>
+      <br />
+      <textarea
+        name="text"
+        style="
+          border: 2px solid purple;
+          font-size: 14px;
+          font-family: monospace;
+          letter-spacing: 1px;
+          margin: 2px;
+          font-weight: 100;
+        "
+      >
+ Let's make your thoughts fun! Type away... </textarea
+      >
+      <p class="result"></p>
+    </div>
+
+    <script src="./sarcastic.js"></script>
+  </body>
+</html>
