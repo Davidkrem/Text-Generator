@@ -21,3 +21,4 @@ This is a fun text generator that will transform your text into sarcastic, funky
 Completed
 
 ### **View My Project**
+https://davidkrem.github.io/Text-Generator/
