@@ -7,26 +7,21 @@ const funkyLetters = {
       };
 /* eslint-enable */
 
-//Storing my methods within the filters Object
-
 const filters = {
         sarcastic(letter, index) {
-                // if index number of letter is 1 or odd, thrn true and will be UpperCase
+          
                 if (index % 2) {
                         return letter.toUpperCase();
                 }
-                // if even index of letter will return o or even and lowercase the letter
 
                 return letter.toLowerCase();
         },
         funky(letter) {
                 let funkyLetter = funkyLetters[letter];
-                // first check if there is a funky letter for this case
                 if (funkyLetter) return funkyLetter;
-                // if not, check for a lowercase version
                 funkyLetter = funkyLetters[letter.toLowerCase()];
                 if (funkyLetter) return funkyLetter;
-                // if NOTHING, return regular letter
+               
                 return letter;
         },
         unable(letter) {
@@ -39,10 +34,7 @@ const filters = {
 };
 
 function transformText(text) {
-        // const filter = document.querySelector('[name ="filter"]:checked').value;
-        // taking the text, and looping over every letter
         const filter = filterInputs.find((input) => input.checked).value;
-        // if item referenced to look up is a VARIABLE and NOT a PROPERTY of a function, you must put it in []
         const mod = Array.from(text).map(filters[filter]);
         result.textContent = mod.join('');
 }
